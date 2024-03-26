@@ -1,0 +1,4 @@
+[default]
+path = "/usr/share/backgrounds"
+duration= "5m"
+apply-shadow=true
