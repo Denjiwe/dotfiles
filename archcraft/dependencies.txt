@@ -1,4 +1,3 @@
-batify
 nwg-look
 discord
 waybar
@@ -20,3 +19,9 @@ docker-compose
 phpstorm
 clickup
 code
+obs-studio
+linux-headers
+v4l2loopback
+pipewire
+xdg-desktop-portal-wayland
+btop
