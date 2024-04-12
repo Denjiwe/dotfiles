@@ -5,9 +5,11 @@ wlogout
 alacritty
 firefox-developer-edition
 swaync
+cronie
 wpaperd
 vlc
 wofi
+rofi
 sddm
 fira-code
 swaylock-effects
@@ -25,3 +27,8 @@ v4l2loopback
 pipewire
 xdg-desktop-portal-wayland
 btop
+grim
+slurp
+swappy
+libreoffice-still
+python-pywal

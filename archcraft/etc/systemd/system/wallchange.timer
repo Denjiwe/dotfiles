@@ -1,0 +1,9 @@
+[Unit]
+Description= Runs the wallchange.service job
+
+[Timer]
+OnUnitActiveSec=120s
+OnBootSec=10s
+
+[Install]
+WantedBy=timers.target
