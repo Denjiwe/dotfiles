@@ -71,7 +71,7 @@
         },
         {
           "label": "",
-          "command": "alacritty -e /usr/bin/btop"
+          "command": "alacritty --class floating -e /usr/bin/btop"
         }
       ]
     }

@@ -1,0 +1,13 @@
+[Unit]
+Description= battery notification script
+
+[Service]
+User=santhiago
+WorkingDirectory=/home/santhiago/
+ProtectHome=false
+Type=simple
+ExecStart=env XDG_RUNTIME_DIR=/run/user/1000 /home/santhiago/.config/hypr/scripts/battery-alert
+Environment=PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/home/santhiago
+
+[Install]
+WantedBy=multi-user.target

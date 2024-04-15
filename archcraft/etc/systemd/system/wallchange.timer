@@ -2,7 +2,7 @@
 Description= Runs the wallchange.service job
 
 [Timer]
-OnUnitActiveSec=120s
+OnUnitActiveSec=60s
 OnBootSec=10s
 
 [Install]

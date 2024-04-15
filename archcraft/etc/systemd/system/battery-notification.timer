@@ -1,0 +1,9 @@
+[Unit]
+Description= Runs the battery-notification.service job
+
+[Timer]
+OnUnitActiveSec=360s
+OnBootSec=10s
+
+[Install]
+WantedBy=timers.target

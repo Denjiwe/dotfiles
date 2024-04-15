@@ -3,6 +3,7 @@
 sleep 0.5
 
 HOME=/home/santhiago
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 # Fetch the wallpaper path and remove quotes
 wallpaper_path_one=$(wpaperctl get-wallpaper eDP-1 | tr -d '"')

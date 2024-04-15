@@ -11,12 +11,9 @@
 #clock,
 #network,
 #window,
-#memory,
 #battery,
-#cpu,
 #backlight,
 #pulseaudio,
-#temperature,
 #custom-notification,
 #tray {
   background-color: #2f2f2f;
@@ -84,8 +81,12 @@ window > box {
   margin-right:-10px;
 }
 
-#cpu {
-  color: #7ad175;
+#taskbar button {
+    margin: -5px;
+}
+
+#clock {
+  color: #51a1ff;
 }
 
 #pulseaudio {
@@ -96,16 +97,36 @@ window > box {
   background-color: #633e41;
 }
 
-#temperature {
-  color: #ba72d6;
-}
-
-#temperature.critical {
-  background-color: #e06c75;
+#cpu {
+  color: #7ad175;
+  background-color: #2f2f2f;
+  padding: 0 10px;
+  margin: 6px 0;
+  margin-right: 2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 #memory {
   color: #f5c211;
+  background-color: #2f2f2f;
+  padding: 0 10px;
+  margin: 6px 0;
+  margin-left: -8px;
+}
+
+#temperature {
+  color: #ba72d6;
+  background-color: #2f2f2f;
+  padding: 0 10px;
+  margin: 6px 0;
+  margin-left: -8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#temperature.critical {
+  background-color: #910109;
 }
 
 #custom-media {
@@ -114,16 +135,14 @@ window > box {
   color: #c0bfbc;
 }
 
-#taskbar button {
-    margin: -5px;
-}
-
-#clock {
-  color: #51a1ff;
+#custom-notification {
+  padding-left: 10px;
+  padding-right: 14px;
 }
 
 #battery {
-  margin-right: 8px;
+  margin-right: 10px;
+  padding-right: 18px;
   color: #c0bfbc;
 }
 

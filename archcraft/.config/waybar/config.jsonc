@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "custom/notification", "cpu", "memory", "temperature", "keyboard-state", "backlight", "battery", "battery#bat2", "tray"],
+    "modules-right": ["pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
     // Modules configuration
      "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -48,7 +48,7 @@
         "icon-size": 15,
         "tooltip-format": "{title}",
         "on-click": "activate",
-        "on-click-middle": "close",
+        "on-click-right": "close",
         "ignore-list": [
            "Alacritty"
         ],
@@ -60,31 +60,13 @@
             "Foot Server": "Terminal"
         }
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+    "group/motherboard": {
+        "orientation": "horizontal",
+        "modules": [
+           "cpu",
+           "memory",
+           "temperature"
+         ]
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -101,7 +83,20 @@
         // "timezone": "America/New_York",
 	"format":"{:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%e %B %Y %H:%M}"
+        "format-alt": "{:%e %B %Y %H:%M}",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -136,9 +131,6 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
