@@ -1,6 +1,6 @@
 #!/bin/bash
 
-playerctl pause -q
+playerctl pause
 
 $HOME/.config/hypr/scripts/wallchange.sh
 
