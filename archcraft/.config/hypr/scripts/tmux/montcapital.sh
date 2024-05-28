@@ -17,6 +17,7 @@ then
     tmux new-window -n outros
     tmux split-window -h -t $session_name:outros.0
     tmux select-window -t $session_name:0
+    tmux select-pane -t $session_name:outros.0
     tmux rename-window -t $session_name 'projeto'
     tmux select-pane -t $session_name:projeto.0
 fi
