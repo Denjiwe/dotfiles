@@ -15,6 +15,7 @@
 #backlight,
 #pulseaudio,
 #custom-notification,
+#custom-power,
 #tray {
   background-color: #2f2f2f;
   padding: 0 10px;
@@ -184,4 +185,8 @@ label:focus {
 #network.disconnected {
     background-color: #633e41;
     color: #2f2f2f;
+}
+
+#custom-power {
+    font-size: 18px;
 }

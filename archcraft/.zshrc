@@ -130,11 +130,17 @@ alias lr='ls -R'
 alias lg='ls -l --group-directories-first'
 
 # git
-alias gcl='git clone --depth 1'
+alias gcl='git clone'
 alias gi='git init'
+alias gl='git log'
+alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
-alias gp='git push origin master'
+alias gcm='git checkout main'
+alias gp='git pull'
+alias gpm='git pull origin main'
+alias gb='git branch|cat'
+alias gbr='git branch --remote|cat'
 
 # node
 alias yinstall='UV_USE_IO_URING=0 yarn install'

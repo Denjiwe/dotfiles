@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
+    "modules-right": ["custom/power", "pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
     // Modules configuration
      "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -199,6 +199,10 @@
         "on-click-middle": "playerctl next",
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout"
     }
 }
 
