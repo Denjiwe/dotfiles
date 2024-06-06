@@ -141,7 +141,10 @@ alias gp='git pull'
 alias gpm='git pull origin main'
 alias gb='git branch|cat'
 alias gbr='git branch --remote|cat'
+alias gnb='git checkout -b'
+alias gco='git checkout'
+alias gmm='git merge main'
 
 # node
-alias yinstall='UV_USE_IO_URING=0 yarn install'
-alias ydev='UV_USE_IO_URING=0 yarn dev'
+alias yi='yarn install'
+alias yd='yarn dev'

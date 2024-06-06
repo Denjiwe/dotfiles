@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/power", "pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
+    "modules-right": ["custom/wallpaper", "custom/power", "pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
     // Modules configuration
      "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -195,14 +195,20 @@
         "escape": true,
         "tooltip-format": "{}",
         "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl previous && playerctl next",
+        "on-click-right": "playerctl position 0",
         "on-click-middle": "playerctl next",
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
         "format": "⏻",
-        "on-click": "wlogout"
+        "on-click": "wlogout",
+        "tooltip-format": "Power Options"
+    },
+    "custom/wallpaper": {
+        "format": "⮺",
+        "on-click": "wpaperctl next-wallpaper && $HOME/.config/hypr/scripts/wallchange.sh",
+        "tooltip-format": "Next Wallpaper"
     }
 }
 

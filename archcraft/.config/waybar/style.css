@@ -16,6 +16,7 @@
 #pulseaudio,
 #custom-notification,
 #custom-power,
+#custom-wallpaper,
 #tray {
   background-color: #2f2f2f;
   padding: 0 10px;
@@ -190,3 +191,9 @@ label:focus {
 #custom-power {
     font-size: 18px;
 }
+
+#custom-wallpaper {
+    font-size: 14px;
+    padding-top: 2px;
+}
+
