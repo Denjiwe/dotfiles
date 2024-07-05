@@ -5,9 +5,14 @@
     // "width": 1280, // Waybar width
     "spacing": 5, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window", "custom/media"],
+    "modules-left": [
+        "hyprland/workspaces", 
+        "wlr/taskbar", 
+        "hyprland/window", 
+        "custom/media"
+    ],
     "modules-center": ["clock"],
-    "modules-right": ["custom/wallpaper", "custom/power", "pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
+    "modules-right": ["custom/apps","custom/wallpaper", "custom/power", "pulseaudio", "custom/notification", "group/motherboard", "keyboard-state", "backlight", "battery", "tray"],
     // Modules configuration
      "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -37,16 +42,6 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 15,
@@ -68,8 +63,8 @@
         "orientation": "horizontal",
         "modules": [
            "cpu",
-           "memory",
-           "temperature"
+           "memory"
+           // "temperature"
          ]
     },
     "idle_inhibitor": {
@@ -165,8 +160,8 @@
         "on-click": "pavucontrol"
     },
     "custom/notification": {
-        "tooltip": false,
         "format": "{icon}",
+        "tooltip-format": "Notifications",
         "format-icons": {
           "notification": "<span foreground='red'><sup></sup></span>",
           "none": "",
@@ -204,6 +199,11 @@
         "format": "⏻",
         "on-click": "wlogout",
         "tooltip-format": "Power Options"
+    },
+    "custom/apps": {
+        "format": "Apps",
+        "on-click": "rofi -show drun -modi drun,filebrowser,run,window & sleep 0.2; hyprctl dispatch focuswindow '^(Rofi)'",
+        "tooltip-format": "Search for apps"
     },
     "custom/wallpaper": {
         "format": "⮺",

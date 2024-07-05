@@ -17,6 +17,7 @@
 #custom-notification,
 #custom-power,
 #custom-wallpaper,
+#custom-apps,
 #tray {
   background-color: #2f2f2f;
   padding: 0 10px;
@@ -115,6 +116,8 @@ window > box {
   padding: 0 10px;
   margin: 6px 0;
   margin-left: -8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 #temperature {
