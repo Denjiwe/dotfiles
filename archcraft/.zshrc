@@ -117,6 +117,7 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
+
 # omz
 alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
@@ -136,15 +137,29 @@ alias gl='git log'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gr='git restore'
 alias gcm='git checkout main'
 alias gp='git pull'
 alias gpm='git pull origin main'
 alias gb='git branch|cat'
 alias gbr='git branch --remote|cat'
 alias gnb='git checkout -b'
+alias grb='git branch -m'
+alias gdb='git branch -D'
 alias gco='git checkout'
 alias gmm='git merge main'
+
+function gcof() { 
+    git checkout feature/"$@"
+}
 
 # node
 alias yi='yarn install'
 alias yd='yarn dev'
+alias yb='yarn build'
+
+# services
+alias restart-wallchange='sudo systemctl restart wallchange.service'
+
+# hyprland
+alias hyprconfig='vim ~/.config/hypr/hyprland.conf'
