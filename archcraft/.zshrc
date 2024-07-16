@@ -119,7 +119,7 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 
 # omz
-alias zshconfig="geany ~/.zshrc"
+alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 
 # ls
@@ -138,6 +138,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gr='git restore'
+alias grs='git restore --staged'
 alias gcm='git checkout main'
 alias gp='git pull'
 alias gpm='git pull origin main'
@@ -153,6 +154,12 @@ function gcof() {
     git checkout feature/"$@"
 }
 
+# make
+alias msd='make start-development'
+alias mspd='make stop-development'
+alias mb='make bash'
+alias mt='make tinker'
+
 # node
 alias yi='yarn install'
 alias yd='yarn dev'
@@ -161,5 +168,8 @@ alias yb='yarn build'
 # services
 alias restart-wallchange='sudo systemctl restart wallchange.service'
 
-# hyprland
+# configs
 alias hyprconfig='vim ~/.config/hypr/hyprland.conf'
+
+# applications
+alias suthunar='sudo -E thunar'
